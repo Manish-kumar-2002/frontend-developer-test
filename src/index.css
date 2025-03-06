@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+body {
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+a {
+  color: #fff;
+}
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1340px;
+  width: 100%;
+}
+
+.hero-section {
+  overflow: hidden;
+}
+.hero-section:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 400px;
+  background: url("./assets/top-right.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.hero-section:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  height: 400px;
+  background: url("./assets/bottom-left.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+@keyframes slides {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes reverseSlides {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.companies-logo {
+  animation: 30s slides infinite linear;
+  position: relative;
+}
+.companies-logo img {
+  width: 140px;
+}
+
+.reverseSlide.companies-logo {
+  position: relative;
+  animation: 30s reverseSlides infinite linear;
+  will-change: transform;
+}
+
+@media all and (max-width: 767px) {
+  .nav {
+    position: fixed;
+    top: -700%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    width: 96%;
+    overflow: hidden;
+    background-color: #000000f0;
+    backdrop-filter: blur(3px);
+    z-index: 10;
+    transition: all 0.5s;
+    opacity: 0;
+  }
+  .nav ul {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav ul li a {
+    font-size: 40px;
+  }
+  .submenu-icon img {
+    width: 20px;
+    margin-top: 12px;
+  }
+  footer {
+    padding-bottom: 70px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .hero-section:after {
+    width: 400px;
+    height: 587px;
+  }
+  .hero-section:before {
+    width: 520px;
+    height: 536px;
+  }
+
+  .hero-section.used:after {
+    width: 400px;
+    height: 500px;
+  }
+  .hero-section.used:before {
+    width: 400px;
+    height: 450px;
+  }
+
+  .companies-logo img {
+    width: auto;
+  }
+}
