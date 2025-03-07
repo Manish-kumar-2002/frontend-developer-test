@@ -144,7 +144,9 @@ const Footer = () => {
             <Link to="/" className="block mb-3">
               <img src={Logo} alt="logo" />
             </Link>
-            <span className="font-[300] text-[14px] mb-4 block">Get latest updates</span>
+            <span className="font-[300] text-[14px] mb-4 block">
+              Get latest updates
+            </span>
             <input
               type="email"
               placeholder="Your email"

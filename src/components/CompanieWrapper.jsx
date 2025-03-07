@@ -17,7 +17,7 @@ const CompanieWrapper = () => {
           </p>
         </div>
       </div>
-        <Companies />
+      <Companies />
     </section>
   );
 };

@@ -1,12 +1,11 @@
 import React from "react";
 import OfferCard from "./OfferCard";
-import BrandingImg from "../assets/branding.svg"
-import WebImg from "../assets/web.svg"
-import DigitalImg from "../assets/digital.svg"
-import MobileImg from "../assets/mobile.svg"
-import SeoImg from "../assets/seo.svg"
-import TestingImg from "../assets/testing.svg"
- 
+import BrandingImg from "../assets/branding.svg";
+import WebImg from "../assets/web.svg";
+import DigitalImg from "../assets/digital.svg";
+import MobileImg from "../assets/mobile.svg";
+import SeoImg from "../assets/seo.svg";
+import TestingImg from "../assets/testing.svg";
 
 const OfferWrapper = () => {
   return (
@@ -23,12 +22,48 @@ const OfferWrapper = () => {
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-        <OfferCard offerImg={BrandingImg} offerName={"Branding"} offerPra={"Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices"} />
-        <OfferCard offerImg={WebImg} offerName={"Web development"} offerPra={"Integer ante non nunc, eget est justo vel semper nunc. Lacus"} />
-        <OfferCard offerImg={DigitalImg} offerName={"Digital marketing"} offerPra={"Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. Auctor et leo urna est."} />
-        <OfferCard offerImg={MobileImg} offerName={"Mobile App"} offerPra={"Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices"} />
-        <OfferCard offerImg={SeoImg} offerName={"SEO"} offerPra={"Integer ante non nunc, eget est justo vel semper nunc. Lacus"} />
-        <OfferCard offerImg={TestingImg} offerName={"User testing"} offerPra={"Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. Auctor et leo urna est."} />
+          <OfferCard
+            offerImg={BrandingImg}
+            offerName={"Branding"}
+            offerPra={
+              "Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices"
+            }
+          />
+          <OfferCard
+            offerImg={WebImg}
+            offerName={"Web development"}
+            offerPra={
+              "Integer ante non nunc, eget est justo vel semper nunc. Lacus"
+            }
+          />
+          <OfferCard
+            offerImg={DigitalImg}
+            offerName={"Digital marketing"}
+            offerPra={
+              "Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. Auctor et leo urna est."
+            }
+          />
+          <OfferCard
+            offerImg={MobileImg}
+            offerName={"Mobile App"}
+            offerPra={
+              "Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices"
+            }
+          />
+          <OfferCard
+            offerImg={SeoImg}
+            offerName={"SEO"}
+            offerPra={
+              "Integer ante non nunc, eget est justo vel semper nunc. Lacus"
+            }
+          />
+          <OfferCard
+            offerImg={TestingImg}
+            offerName={"User testing"}
+            offerPra={
+              "Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. Auctor et leo urna est."
+            }
+          />
         </div>
       </div>
     </section>
