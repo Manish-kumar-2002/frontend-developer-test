@@ -5,6 +5,9 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Logo from "../assets/logo.svg";
 import Submenu from "../assets/submenu.svg";
+import ContactImg from "../assets/contact-copy.png";
+import Contact from "./Contact";
+import Button from "./Button";
 
 const Header = () => {
   const [navOn, setNavOn] = useState(false);
@@ -170,17 +173,53 @@ const Header = () => {
               </ul>
             </nav>
             <div className="btn">
-              <Link
-                to="/"
-                className="cursor-pointer text-[#FFA800] text-[14px] font-[700] border-1 border-[#FFA800] px-[30px] py-[8px] rounded-full bg-tranparent transition-all duration-300 
-  hover:outline-none hover:shadow-[3px_3px_0_0_#ffa800]"
-              >
-                Contact
-              </Link>
+              <Contact />
             </div>
           </div>
         </div>
       </header>
+
+      <div id="popup-article" className="popup">
+        <div className="popup__block md:flex">
+          <a href="#" className="popup__close">
+            close
+          </a>
+          <div className="md:w-[50%]">
+            <img className="" src={ContactImg} alt="" />
+          </div>
+          <div>
+            <h3 className="popup__title">Let’s discuss the idea</h3>
+            <p className="popup__pra">
+              Risus commodo id odio turpis pharetra elementum. Pulvinar porta
+              porta feugiat scelerisque in elit.
+            </p>
+            <form className="flex gap-[14px] flex-col">
+            <input
+                type="text"
+                placeholder="Your Name"
+                // value={email}
+                // onChange={(e) => setEmail(e.target.value)}
+                className="w-full outline-none border-2 border-[rgba(161, 174, 191, 1)] rounded-full py-[10px] px-[22px] md:py-[12px] text-white placeholder-white"
+              />
+              <input
+                type="text"
+                placeholder="Your Phone"
+                // value={email}
+                // onChange={(e) => setEmail(e.target.value)}
+                className="w-full outline-none border-2 border-[rgba(161, 174, 191, 1)] rounded-full py-[10px] px-[22px] md:py-[12px] text-white placeholder-white"
+              />
+              <input
+                type="email"
+                placeholder="Your email"
+                // value={email}
+                // onChange={(e) => setEmail(e.target.value)}
+                className="w-full outline-none border-2 border-[rgba(161, 174, 191, 1)] rounded-full py-[10px] px-[22px] md:py-[12px] text-white placeholder-white"
+              />
+              <Button tag={"Submit"} />
+            </form>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
